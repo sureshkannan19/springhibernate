@@ -1,0 +1,1 @@
+insert into mydb.product values(1, "Calculator","To solve problems",5);
