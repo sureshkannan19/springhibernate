@@ -1,5 +1,10 @@
 # springhibernate
 In this project, have explored spring data jpa with hibernate implementation.
+
+**Note:**
+
+**MySQL** is used for database operation. If MySQL setup is **not present in your machine**, please feel free to use **H2 database** by changing the profile --> **@ActiveProfiles** from "dev" to "int" in <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationTests.java">here.</a>
+
 -----------------------------------------------------------------------------
 **Fundamentals : **
 **@Table** : Optional, used only when java class name is different from table name. 
