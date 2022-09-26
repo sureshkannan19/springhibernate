@@ -6,8 +6,10 @@ In this project, have explored spring data jpa with hibernate implementation.
 **MySQL** is used for database operation. If MySQL setup is **not present in your machine**, please feel free to use **H2 database** by changing the profile --> **@ActiveProfiles** from "dev" to "int" in <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationTests.java">here.</a>
 
 -----------------------------------------------------------------------------
-**Fundamentals : **
+**Fundamentals :**
+
 **@Table** : Optional, used only when java class name is different from table name. 
+
 **@Entity** :
  * to mark POJO class as an entity
  * Entity name is used in JPQL, 
@@ -25,3 +27,8 @@ In this project, have explored spring data jpa with hibernate implementation.
 * Refer : <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationTests.java">Few examples</a>
 * Refer : <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-keywords">Spring Documentation</a>
 
+----------------------------------------------------------------------------------------------
+**Cache :** 
+* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationFirstLevelCacheTest.java">FirstLevelCache</a>
+
+* For <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationSecondLevelCacheTest.java">SecondLevelCache</a>, explore <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/resources/application.properties">application.properties</a> and <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/resources/ehcache.xml">ehcache.xml</a>
