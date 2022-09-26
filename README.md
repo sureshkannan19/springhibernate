@@ -18,5 +18,5 @@ In this project, have explored spring data jpa with hibernate implementation.
 ------------------------------------------------------------------------------
 **Finder Methods** - Spring JPA has provided features, such as without writing a JPQL, desired search operation can be performed by using method name itself.
 * Refer : <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationTests.java">Few examples</a>
-* Refer : <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-keywords">Spring Documentation. Click here to Explore</a>
+* Refer : <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-keywords">Spring Documentation</a>
 
