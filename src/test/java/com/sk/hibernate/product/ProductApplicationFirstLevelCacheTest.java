@@ -12,7 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sk.hibernate.entity.Product;
 import com.sk.hibernate.product.dao.ProductRepository;
 
-@SpringBootTest
+/**
+ * Disabled SecondLevelCache
+ */
+@SpringBootTest(args = "--spring.jpa.properties.hibernate.cache.use_second_level_cache=false")
 @ActiveProfiles("dev")
 public class ProductApplicationFirstLevelCacheTest {
 
@@ -43,9 +46,12 @@ public class ProductApplicationFirstLevelCacheTest {
 	@Transactional // Without @Transactional FirstLevelCache will not work.
 	public void firstLevelCache_test() {
 		productRepository.findById(1); // fetch from db and result is cached
-		productRepository.findById(1); // fetch from cache
+		productRepository.findById(1); // check in cache, if present fetch from cache else fetch from db
 	}
 
+	/**
+	 * After evicting the session, in cache data is not present hence fetch from db
+	 */
 	@Test
 	@Transactional
 	public void firstLevelCache_sessionEvict_test() {
