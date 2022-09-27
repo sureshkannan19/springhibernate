@@ -65,5 +65,5 @@ public class ProductApplicationSpringCacheTest {
 		productRepository.findByPrice(15999); // fetch from db and result is not cached
 		productRepository.findByPrice(15999); // fetch from db
 	}
-
+	
 }
