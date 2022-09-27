@@ -60,4 +60,5 @@ public class ProductApplicationFirstLevelCacheTest {
 		session.evict(product);
 		productRepository.findById(1); // fetch from db
 	}
+
 }

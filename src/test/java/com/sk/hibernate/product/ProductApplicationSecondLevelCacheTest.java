@@ -59,4 +59,5 @@ public class ProductApplicationSecondLevelCacheTest {
 			productRepository.findById(1); // fetch from DB
 		}
 	}
+	
 }
