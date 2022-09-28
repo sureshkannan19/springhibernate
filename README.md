@@ -3,26 +3,9 @@ In this project, have explored spring data jpa with hibernate implementation.
 
 **Note:**
 
-**MySQL** is used for database operation. If MySQL setup is **not present in your machine**, please feel free to use **H2 database** by changing the profile --> **@ActiveProfiles** from "dev" to "int" in <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationTests.java">here.</a>
+**MySQL** is used for database operation. If MySQL setup is **not present in your machine**, please feel free to use **H2 database** by changing the profile --> **@ActiveProfiles** from "dev" to "int" in all test files, in this <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/">folder</a>
 
------------------------------------------------------------------------------
-**Fundamentals :**
-
-**@Table** : Optional, used only when java class name is different from table name. 
-
-**@Entity** :
- * to mark POJO class as an entity
- * Entity name is used in JPQL, 
-      
-     by default Class name is Entity name 
-     @Entity
-     public class Product {}
-     (i.e Select t from Product t), 
-     
-     @Entity(name="ProductEntity"
-     public class Product {}
-     (i.e Select t from ProductEntity t)
-------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 **Finder Methods** - Spring JPA has provided features, such as without writing a JPQL, desired search operation can be performed by using method name itself.
 * Refer : <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationTests.java">Few examples</a>
 * Refer : <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-keywords">Spring Documentation</a>
@@ -37,3 +20,5 @@ In this project, have explored spring data jpa with hibernate implementation.
 
 Note : To show the difference between First and SecondLevelCache, second level cache is disabled in
 <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationFirstLevelCacheTest.java">FirstLevelCache</a> using **--spring.jpa.properties.hibernate.cache.use_second_level_cache=false**
+------------------------------------------------------------------------------------------------
+<a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/BankApplicationTests.java">Pageable and Sorting</a>

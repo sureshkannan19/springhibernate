@@ -11,8 +11,8 @@ import com.sk.hibernate.employee.dao.EmployeeRepository;
 import com.sk.hibernate.entity.Employee;
 
 @SpringBootTest
-@ActiveProfiles("int")
-class EmployeeApplicationTests {
+@ActiveProfiles("dev")
+public class EmployeeApplicationTests {
 
 	@Autowired
 	EmployeeRepository employeeRepository;
