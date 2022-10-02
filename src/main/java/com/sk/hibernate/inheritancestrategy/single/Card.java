@@ -1,4 +1,4 @@
-package com.sk.hibernate.entity;
+package com.sk.hibernate.inheritancestrategy.single;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;

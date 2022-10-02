@@ -1,5 +1,6 @@
-package com.sk.hibernate.entity;
+package com.sk.hibernate.inheritancestrategy.single;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 import lombok.EqualsAndHashCode;
@@ -7,12 +8,14 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+@Entity
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
 @ToString
-@Entity
-public class MaruthiSwift extends Car {
+@DiscriminatorValue("CH")
+public class Check extends Payment {
 
-	private double pricePerLitre;
+	private int checkNum;
+
 }

@@ -1,4 +1,4 @@
-package com.sk.hibernate.entity;
+package com.sk.hibernate.inheritancestrategy.tableperclass;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

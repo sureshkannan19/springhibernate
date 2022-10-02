@@ -7,10 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.sk.hibernate.entity.Car;
-import com.sk.hibernate.entity.MaruthiSwift;
-import com.sk.hibernate.entity.TataNexon;
-
 @SpringBootTest
 @ActiveProfiles("dev")
 public class IStrategyTablePerClassApplicationTest {
@@ -30,7 +26,7 @@ public class IStrategyTablePerClassApplicationTest {
 		Car result = repository.findById("TN09CH0001").get();
 		assertEquals(car, result);
 	}
-	
+
 	@Test
 	public void test_maruthiSwift() {
 		MaruthiSwift car = new MaruthiSwift();

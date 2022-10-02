@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.sk.hibernate.entity.Card;
-import com.sk.hibernate.entity.Check;
-
 @SpringBootTest
 @ActiveProfiles("dev")
 public class IStrategySingleApplicationTest {
