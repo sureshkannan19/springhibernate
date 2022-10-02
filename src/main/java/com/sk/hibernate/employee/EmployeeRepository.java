@@ -1,4 +1,4 @@
-package com.sk.hibernate.employee.dao;
+package com.sk.hibernate.employee;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package com.sk.hibernate.bank.dao;
+package com.sk.hibernate.bank;
 
 import java.util.List;
 

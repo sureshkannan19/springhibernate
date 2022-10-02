@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import com.sk.hibernate.entity.Product;
-import com.sk.hibernate.product.dao.ProductRepository;
 
 @SpringBootTest
 @ActiveProfiles("dev")

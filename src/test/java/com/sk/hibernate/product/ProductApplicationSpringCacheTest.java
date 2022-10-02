@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.sk.hibernate.product.dao.ProductRepository;
-
 @SpringBootTest
 @ActiveProfiles("dev")
 public class ProductApplicationSpringCacheTest {

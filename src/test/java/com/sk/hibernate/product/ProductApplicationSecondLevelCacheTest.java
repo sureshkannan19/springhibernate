@@ -10,7 +10,6 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sk.hibernate.entity.Product;
-import com.sk.hibernate.product.dao.ProductRepository;
 
 @SpringBootTest
 @ActiveProfiles("dev")

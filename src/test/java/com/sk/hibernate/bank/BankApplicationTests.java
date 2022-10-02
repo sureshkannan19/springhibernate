@@ -9,8 +9,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.sk.hibernate.bank.dao.BankRepository;
-
 @SpringBootTest
 @ActiveProfiles("dev")
 public class BankApplicationTests {

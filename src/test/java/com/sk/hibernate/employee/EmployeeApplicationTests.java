@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.sk.hibernate.employee.dao.EmployeeRepository;
 import com.sk.hibernate.entity.Employee;
 
 @SpringBootTest

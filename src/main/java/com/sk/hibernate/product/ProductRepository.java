@@ -1,4 +1,4 @@
-package com.sk.hibernate.product.dao;
+package com.sk.hibernate.product;
 
 import java.util.List;
 
