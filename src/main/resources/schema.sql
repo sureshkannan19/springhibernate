@@ -59,3 +59,20 @@ create table MARUTHI_SWIFT
       3
    )
 );
+create table STUDENT
+(
+   ID INT PRIMARY KEY AUTO_INCREMENT,
+   NAME varchar (25)
+);
+create table BOYZ
+(
+   ID INT,
+   NO_OF_SUBJECTS_FAILED INT,
+   FOREIGN KEY (id) REFERENCES STUDENT (id)
+);
+create table GIRLZ
+(
+   ID INT,
+   NO_OF_SUBJECTS_PASSED INT,
+   FOREIGN KEY (id) REFERENCES STUDENT (id)
+);
