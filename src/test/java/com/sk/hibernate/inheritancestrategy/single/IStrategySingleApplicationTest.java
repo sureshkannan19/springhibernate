@@ -1,4 +1,4 @@
-package com.sk.hibernate.payment;
+package com.sk.hibernate.inheritancestrategy.single;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,10 +12,10 @@ import com.sk.hibernate.entity.Check;
 
 @SpringBootTest
 @ActiveProfiles("dev")
-public class PaymentApplicationTest {
+public class IStrategySingleApplicationTest {
 
 	@Autowired
-	PaymentRepository paymentRepository;
+	IStrategySingleRepository repository;
 
 	@Test
 	public void test_paymentModeByCard() {
@@ -23,9 +23,9 @@ public class PaymentApplicationTest {
 		card.setAmount(2);
 		card.setCardNum(20);
 
-		paymentRepository.save(card);
-		
-		String paymentMode = paymentRepository.findPModeById(card.getId());
+		repository.save(card);
+
+		String paymentMode = repository.findPModeById(card.getId());
 		assertEquals("CC", paymentMode);
 	}
 
@@ -35,9 +35,9 @@ public class PaymentApplicationTest {
 		check.setAmount(2);
 		check.setCheckNum(20);
 
-		paymentRepository.save(check);
-		
-		String paymentMode = paymentRepository.findPModeById(check.getId());
+		repository.save(check);
+
+		String paymentMode = repository.findPModeById(check.getId());
 		assertEquals("CH", paymentMode);
 	}
 }

@@ -27,7 +27,6 @@ create table mydb.BANKACCOUNT
    FIRST_NAME varchar (25),
    BALANCE int
 );
-
 create table mydb.PAYMENT
 (
    ID int PRIMARY KEY auto_increment,
@@ -39,4 +38,24 @@ create table mydb.PAYMENT
    ),
    CARD_NUM varchar (20),
    CHECK_NUM varchar (20)
+);
+create table TATA_NEXON
+(
+   REGISTER_ID VARCHAR (20) PRIMARY KEY,
+   FUEL_TYPE varchar (15),
+   PRICE_PER_UNIT DECIMAL
+   (
+      8,
+      3
+   )
+);
+create table MARUTHI_SWIFT
+(
+   REGISTER_ID VARCHAR (20) PRIMARY KEY,
+   FUEL_TYPE varchar (15),
+   PRICE_PER_LITRE DECIMAL
+   (
+      8,
+      3
+   )
 );
