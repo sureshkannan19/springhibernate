@@ -24,7 +24,7 @@ Note : To show the difference between First and SecondLevelCache, second level c
 <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/BankApplicationTests.java" style="text-decoration:none;">Pageable and Sorting</a>
 
 ------------------------------------------------------------------------------------------------
-**Inheritance Strategy :- **
+**Inheritance Strategy :-**
 
 * **Single :**  Entities used are Payment, Card, Check and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/single" style="text-decoration:none;">Test file</a>
 
@@ -32,7 +32,7 @@ Note : To show the difference between First and SecondLevelCache, second level c
 
 
 ------------------------------------------------------------------------------------------------
-** Miscellaneous : **
+**Miscellaneous :**
 * <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/main/java/com/sk/hibernate/entity" style="text-decoration:none;">Entities</a>
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/resources/schema.sql" style="text-decoration:none;">schema.sql</a>
 * <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/resources/db/data" style="text-decoration:none;">Test datas</a>
