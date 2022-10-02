@@ -27,9 +27,9 @@ To show the difference between First and SecondLevelCache, second level cache is
 ------------------------------------------------------------------------------------------------
 **Inheritance Strategy :-**
 
-* **Single :**  Entities used are Payment, Card, Check and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/single" style="text-decoration:none;">Test file</a>
+* **Single :**  Entities used are Payment, Card, Check and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/single/IStrategySingleApplicationTest.java" style="text-decoration:none;">Test file</a>
 
-* **TablePerClass :**  Entities used are Car, TataNexon, MaruthiSwift and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/tableperclass" style="text-decoration:none;">Test file</a>
+* **TablePerClass :**  Entities used are Car, TataNexon, MaruthiSwift and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/tableperclass/IStrategyTablePerClassApplicationTest.java" style="text-decoration:none;">Test file</a>
 
 
 ------------------------------------------------------------------------------------------------
