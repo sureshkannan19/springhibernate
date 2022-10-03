@@ -76,3 +76,13 @@ create table GIRLZ
    NO_OF_SUBJECTS_PASSED INT,
    FOREIGN KEY (id) REFERENCES STUDENT (id)
 );
+create table customer
+(
+   id int primary key auto_increment,
+   name varchar (20),
+   street_address varchar (30),
+   city varchar (20),
+   state varchar (20),
+   zip_code varchar (20),
+   country varchar (20)
+);
