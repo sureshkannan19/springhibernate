@@ -1,14 +1,10 @@
-package com.sk.hibernate.employee;
+package com.sk.hibernate.onetomany;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
-import com.sk.hibernate.onetomany.UserClientApplication;
 
 @SpringBootApplication
-@EntityScan("com.sk.hibernate.entity")
-public class EmployeeApplication {
+public class UserClientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UserClientApplication.class, args);

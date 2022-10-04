@@ -1,2 +1,0 @@
-insert into mydb.product values (1, "Calculator","To solve problems",5);
-insert into mydb.product values (2, "RealMe", "Mobile", 15999.000);

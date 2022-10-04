@@ -6,7 +6,7 @@ import org.hibernate.Session;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sk.hibernate.entity.Product;
@@ -14,19 +14,15 @@ import com.sk.hibernate.entity.Product;
 /**
  * Disabled SecondLevelCache
  */
-@SpringBootTest(args = "--spring.jpa.properties.hibernate.cache.use_second_level_cache=false")
-@ActiveProfiles("dev")
+@SpringBootTest(args = { "--spring.profiles.active=int" })
+@Sql(scripts = { "/db/data/product-int.sql" })
 public class ProductApplicationFirstLevelCacheTest {
-
+	
 	@Autowired
 	ProductRepository productRepository;
-
+	
 	@Autowired
 	EntityManager entityManager;
-
-	@Test
-	void contextLoads() {
-	}
 
 	/**
 	 * Enable/Add --> spring.jpa.show-sql=true, to witness the working of
@@ -59,5 +55,5 @@ public class ProductApplicationFirstLevelCacheTest {
 		session.evict(product);
 		productRepository.findById(1); // fetch from db
 	}
-
+	
 }

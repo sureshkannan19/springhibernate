@@ -7,10 +7,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 
-@SpringBootTest
-@ActiveProfiles("dev")
+@SpringBootTest(args = "--spring.profiles.active=int")
+@Sql(scripts = {"/db/data/bank-int.sql"})
 public class BankApplicationTests {
 
 	@Autowired

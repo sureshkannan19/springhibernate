@@ -8,25 +8,19 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 
 import com.sk.hibernate.entity.Product;
 
-@SpringBootTest
-@ActiveProfiles("dev")
-class ProductApplicationTests {
+@SpringBootTest(args = "--spring.profiles.active=int")
+@Sql(scripts = { "/db/data/product-int.sql" })
+public class ProductApplicationTests {
 
 	@Autowired
 	ProductRepository productRepository;
 
 	@Test
-	void contextLoads() {
-	}
-
-	@Test
 	public void createProduct() {
-		productRepository.deleteAll();
-
 		Product product = new Product(1, "RealMe", "Mobile", 15999d);
 		productRepository.save(product);
 
@@ -36,8 +30,6 @@ class ProductApplicationTests {
 
 	@Test
 	public void findByDescription_Test() {
-		productRepository.deleteAll();
-
 		Product product = new Product(1, "RealMe", "Mobile", 15999d);
 		productRepository.save(product);
 
@@ -47,8 +39,6 @@ class ProductApplicationTests {
 
 	@Test
 	public void findByNameAndDescription_Test() {
-		productRepository.deleteAll();
-
 		Product product = new Product(1, "RealMe", "Mobile", 15999d);
 		productRepository.save(product);
 
@@ -57,6 +47,6 @@ class ProductApplicationTests {
 		assertEquals(product, actual);
 
 		result = productRepository.findByNameAndDescription("OnePlus", "Mobile");
-		assertTrue(result.isEmpty()); // No record is present with OnePlus as name 
+		assertTrue(result.isEmpty()); // No record is present with OnePlus as name
 	}
 }

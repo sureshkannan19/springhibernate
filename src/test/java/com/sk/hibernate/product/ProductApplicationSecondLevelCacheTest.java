@@ -6,13 +6,13 @@ import org.hibernate.Session;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sk.hibernate.entity.Product;
 
-@SpringBootTest
-@ActiveProfiles("dev")
+@SpringBootTest(args = "--spring.profiles.active=int" )
+@Sql(scripts = { "/db/data/product-int.sql" })
 public class ProductApplicationSecondLevelCacheTest {
 
 	@Autowired
@@ -20,10 +20,6 @@ public class ProductApplicationSecondLevelCacheTest {
 
 	@Autowired
 	EntityManager entityManager;
-
-	@Test
-	void contextLoads() {
-	}
 
 	/**
 	 * Even after evicting cache from session, using SecondLevelCache data is

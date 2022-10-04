@@ -5,19 +5,15 @@ import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 
-@SpringBootTest
-@ActiveProfiles("dev")
+@SpringBootTest(args = "--spring.profiles.active=int")
+@Sql(scripts = { "/db/data/product-int.sql" })
 public class ProductApplicationSpringCacheTest {
 
 	@Autowired
 	ProductRepository productRepository;
-
-	@Test
-	void contextLoads() {
-	}
-
+	
 	@Test
 	public void springCache_test() {
 		productRepository.findByIdIn(Arrays.asList(1, 2)); // fetch from db and result is cached
@@ -63,5 +59,5 @@ public class ProductApplicationSpringCacheTest {
 		productRepository.findByPrice(15999); // fetch from db and result is not cached
 		productRepository.findByPrice(15999); // fetch from db
 	}
-	
+
 }

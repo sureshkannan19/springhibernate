@@ -1,8 +1,8 @@
-CREATE TABLE MYDB.`PRODUCT`
+CREATE TABLE IF NOT EXISTS `PRODUCT`
 (
-   `PRODUCT_ID` int PRIMARY KEY NOT NULL,
+   `PRODUCT_ID` int PRIMARY KEY,
    `NAME` varchar (20) DEFAULT NULL,
-   `DESC` varchar (100) DEFAULT NULL,
+   `DESCRIPTION` varchar (100) DEFAULT NULL,
    `PRICE` decimal
    (
       8,
@@ -10,24 +10,28 @@ CREATE TABLE MYDB.`PRODUCT`
    )
    DEFAULT NULL
 );
-CREATE TABLE MYDB.`EMPLOYEE`
+CREATE TABLE IF NOT EXISTS `EMPLOYEE`
 (
    `EMP_ID` int PRIMARY KEY,
    `NAME` varchar (20) DEFAULT NULL
 );
-CREATE TABLE MYDB.ID_GENERATOR
+CREATE TABLE IF NOT EXISTS MY_SEQUENCES
 (
-   GEN_NAME varchar (60) PRIMARY KEY,
-   GEN_VAL int not null
+   SEQ_NAME varchar (60) PRIMARY KEY,
+   NEXT_VAL int not null
 );
-create table mydb.BANKACCOUNT
+CREATE TABLE IF NOT EXISTS bank_account
 (
    ACC_NUM int primary key auto_increment,
    LAST_NAME varchar (25),
    FIRST_NAME varchar (25),
-   BALANCE int
+   BALANCE decimal
+   (
+      8,
+      3
+   )
 );
-create table mydb.PAYMENT
+CREATE TABLE IF NOT EXISTS PAYMENT
 (
    ID int PRIMARY KEY auto_increment,
    P_MODE varchar (2),
@@ -39,7 +43,7 @@ create table mydb.PAYMENT
    CARD_NUM varchar (20),
    CHECK_NUM varchar (20)
 );
-create table TATA_NEXON
+CREATE TABLE IF NOT EXISTS TATA_NEXON
 (
    REGISTER_ID VARCHAR (20) PRIMARY KEY,
    FUEL_TYPE varchar (15),
@@ -49,7 +53,7 @@ create table TATA_NEXON
       3
    )
 );
-create table MARUTHI_SWIFT
+CREATE TABLE IF NOT EXISTS MARUTHI_SWIFT
 (
    REGISTER_ID VARCHAR (20) PRIMARY KEY,
    FUEL_TYPE varchar (15),
@@ -59,24 +63,24 @@ create table MARUTHI_SWIFT
       3
    )
 );
-create table STUDENT
+CREATE TABLE IF NOT EXISTS STUDENT
 (
    ID INT PRIMARY KEY AUTO_INCREMENT,
    NAME varchar (25)
 );
-create table BOYZ
+CREATE TABLE IF NOT EXISTS BOYZ
 (
    ID INT,
    NO_OF_SUBJECTS_FAILED INT,
    FOREIGN KEY (id) REFERENCES STUDENT (id)
 );
-create table GIRLZ
+CREATE TABLE IF NOT EXISTS GIRLZ
 (
    ID INT,
    NO_OF_SUBJECTS_PASSED INT,
    FOREIGN KEY (id) REFERENCES STUDENT (id)
 );
-create table customer
+CREATE TABLE IF NOT EXISTS customer
 (
    id int primary key auto_increment,
    name varchar (20),
@@ -85,4 +89,17 @@ create table customer
    state varchar (20),
    zip_code varchar (20),
    country varchar (20)
+);
+CREATE TABLE IF NOT EXISTS User_client
+(
+   client_id int PRIMARY KEY AUTO_INCREMENT,
+   client_name varchar (20)
+);
+CREATE TABLE IF NOT EXISTS phone_number
+(
+   id int primary KEY AUTO_INCREMENT,
+   client_id int,
+   number int,
+   type varchar (20),
+   FOREIGN KEY (client_id) REFERENCES User_client (client_id)
 );
