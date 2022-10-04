@@ -6,6 +6,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import com.sk.hibernate.entity.Product;
 
@@ -25,6 +26,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 	Product findByPrice(double price);
 	
 	@Modifying
-	@Query("update product set  description=:description where product_id =:productId")
-	void updateProduct(int productId, String description);
+	@Query("update Product set  description = :description where id = :productId")
+	void updateProduct(@Param("description") String description, @Param("productId") int productId);
 }
