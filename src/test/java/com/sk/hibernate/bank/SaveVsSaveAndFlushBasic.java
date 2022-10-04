@@ -7,10 +7,10 @@ import org.springframework.test.context.jdbc.Sql;
 
 @SpringBootTest(args = "--spring.profiles.active=int" )
 @Sql(scripts = { "/db/data/bank-int.sql" })
-public class TransactionServiceTest {
+public class SaveVsSaveAndFlushBasic {
 
 	@Autowired
-	TransactionService transactionService;
+	SaveVsSaveAndFlush saveVsSaveAndFlush;
 	
 	@Test
 	public void testSave() {
@@ -29,7 +29,7 @@ public class TransactionServiceTest {
 		 * 
 		 */
 
-		transactionService.testSave();
+		saveVsSaveAndFlush.testSave();
 		
 		// Points to Note:
 		/**
@@ -64,17 +64,8 @@ public class TransactionServiceTest {
 		 * first level cache and in db. 
 		 * commit in db- at the end of method execution, data is updated in db
 		 */
-		transactionService.testSaveAndFlush();
+		saveVsSaveAndFlush.testSaveAndFlush();
 	}
 	
-	@Test
-	public void testSaveAndFlush_whenCacheIsEvicted_fetchFromDb_hasLatestChanges() {
-		transactionService.testSaveAndFlush_whenCacheEvicted_fetchFromDb_hasLatestChanges();
-	}
-
-	@Test
-	public void testSave_whenCacheIsEvicted_fetchFromDb_doesNotHaveLatestChanges() {
-		transactionService.testSave_whenCacheEvicted_fetchFromDb_doesNotHaveLatestChanges();
-	}
-
+	
 }

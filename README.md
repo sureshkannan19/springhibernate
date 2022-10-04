@@ -38,8 +38,13 @@ To show the difference between First and SecondLevelCache, second level cache is
 
 Entities used are Address, Customer and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/componentmapping/CustomerApplicationTest.java" style="text-decoration:none;">Test file</a>
 ------------------------------------------------------------------------------------------------
+**Difference between save and saveAndFlush :-**
 
-<a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/TransactionServiceTest.java" style="text-decoration:none;">Save_SaveAndFlush</a>
+* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/SaveVsSaveAndFlush.java" style="text-decoration:none;">SaveVsSaveAndFlushBasic</a>
+
+* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/SaveVsSaveAndFlushOnCacheEvict.java" style="text-decoration:none;">SaveVsSaveAndFlushOnCacheEvict</a>
+
+* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/SaveVsSaveAndFlushOnRollBack.java" style="text-decoration:none;">SaveVsSaveAndFlushOnRollBack</a>
 
 ------------------------------------------------------------------------------------------------
 **Relationship Mapping :**
