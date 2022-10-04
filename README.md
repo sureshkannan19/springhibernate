@@ -42,7 +42,7 @@ Entities used are Address, Customer and <a href="https://github.com/sureshbabk19
 <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/TransactionServiceTest.java" style="text-decoration:none;">Save_SaveAndFlush</a>
 
 ------------------------------------------------------------------------------------------------
-** Relationship Mapping :**
+**Relationship Mapping :**
 
 <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetomany/UserClientApplicationTest.java" style="text-decoration:none;">OneToMany</a>
 
