@@ -1,3 +1,4 @@
+delete from bank_account;
 insert into bank_account (LAST_NAME , FIRST_NAME , BALANCE) values ('jessie','pinkman',5000);
 insert into bank_account (LAST_NAME , FIRST_NAME , BALANCE) values ('barry','allen',4000);
 insert into bank_account (LAST_NAME , FIRST_NAME , BALANCE) values ('joseph','kuruvila',4000);

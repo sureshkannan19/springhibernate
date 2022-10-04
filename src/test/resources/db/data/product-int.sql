@@ -1,3 +1,4 @@
+delete from product;
 insert into product
 (
    product_id,

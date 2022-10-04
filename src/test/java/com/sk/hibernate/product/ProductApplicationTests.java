@@ -8,12 +8,10 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.jdbc.Sql;
 
 import com.sk.hibernate.entity.Product;
 
 @SpringBootTest(args = "--spring.profiles.active=int")
-@Sql(scripts = { "/db/data/product-int.sql" })
 public class ProductApplicationTests {
 
 	@Autowired
