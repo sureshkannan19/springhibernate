@@ -33,14 +33,20 @@ To show the difference between First and SecondLevelCache, second level cache is
 
 * **Joined :** Entities used are Student, Boyz, Girlz and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/joined/IStrategyJoinedApplicationTest.java" style="text-decoration:none;">Test file</a>
 
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 **Component Mapping :** 
 
 Entities used are Address, Customer and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/componentmapping/CustomerApplicationTest.java" style="text-decoration:none;">Test file</a>
 ------------------------------------------------------------------------------------------------
-<a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/TransactionServiceTest.java">Save vs SaveAndFlush</a>
-----------------------------------------------------------------------------------------------------------
 
+<a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/TransactionServiceTest.java" style="text-decoration:none;">Save_SaveAndFlush</a>
+
+------------------------------------------------------------------------------------------------
+** Relationship Mapping :**
+
+<a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetomany/UserClientApplicationTest.java" style="text-decoration:none;">OneToMany</a>
+
+-------------------------------------------------------------------------------------------------------
 **Miscellaneous :**
 * <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/main/java/com/sk/hibernate/entity" style="text-decoration:none;">Entities</a>
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/resources/schema.sql" style="text-decoration:none;">schema.sql</a>

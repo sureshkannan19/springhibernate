@@ -10,7 +10,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.test.context.jdbc.Sql;
 
 @SpringBootTest(args = "--spring.profiles.active=int")
-@Sql(scripts = {"/db/data/bank-int.sql"})
+@Sql(scripts = {"/db/data/userClient.sql"})
 public class BankApplicationTests {
 
 	@Autowired

@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -17,6 +18,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@NoArgsConstructor
 public class PhoneNumber {
 
 	@Id

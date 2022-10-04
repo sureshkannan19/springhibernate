@@ -5,6 +5,7 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,7 +28,7 @@ public class UserClient {
 	private int clientId;
 	private String clientName;
 
-	@OneToMany(mappedBy = "userClient", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "userClient", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<PhoneNumber> phoneNumbers;
 
 	public void addPhoneNumber(PhoneNumber phoneNumber) {
