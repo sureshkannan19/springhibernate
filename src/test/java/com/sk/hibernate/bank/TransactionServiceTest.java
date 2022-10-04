@@ -14,17 +14,17 @@ public class TransactionServiceTest {
 	
 	@Test
 	public void testSave() {
-		// Order of SQL's executed :
+		// Order of logs printed :
 		/**
-		 * Hibernate: select bankaccoun0_.acc_num as acc_num1_0_0_, bankaccoun0_.balance
+		 * 1: select bankaccoun0_.acc_num as acc_num1_0_0_, bankaccoun0_.balance
 		 * as balance2_0_0_, bankaccoun0_.first_name as first_na3_0_0_,
 		 * bankaccoun0_.last_name as last_nam4_0_0_ from bank_account bankaccoun0_ where
 		 * bankaccoun0_.acc_num=?
 		 * 
-		 * Before Save : true
-		 * After Save : true
+		 * 2. Before Save : true
+		 * 3. After Save : true
 		 * 
-		 * Hibernate: update bank_account set balance=?, first_name=?, last_name=? where
+		 * 4. update bank_account set balance=?, first_name=?, last_name=? where
 		 * acc_num=?
 		 * 
 		 */
@@ -34,37 +34,47 @@ public class TransactionServiceTest {
 		// Points to Note:
 		/**
 		 * Save - will commit data to db at the end of the transaction, for performance reason
-		 * Entity Update - while save method is called, entity is updated in first level cache instead of db.
-		 * commit in db- at the end of method call, data is updated in db 
+		 * Entity Update - while save method is executed, entity is updated in first level cache instead of db.
+		 * commit in db - at the end of method execution, data is persisted in db 
 		 */
 	}
 
 	@Test
 	public void testSaveAndFlush() {
 		
-		// Order of SQL's executed :
+		// Order of logs printed :
 		/**
-		 * Hibernate: select bankaccoun0_.acc_num as acc_num1_0_0_, bankaccoun0_.balance
+		 * 1. select bankaccoun0_.acc_num as acc_num1_0_0_, bankaccoun0_.balance
 		 * as balance2_0_0_, bankaccoun0_.first_name as first_na3_0_0_,
 		 * bankaccoun0_.last_name as last_nam4_0_0_ from bank_account bankaccoun0_ where
 		 * bankaccoun0_.acc_num=?
 		 * 
-		 * Before Save : true
+		 * 2. Before Save : true
 		 * 
-		 * Hibernate: update bank_account set balance=?, first_name=?, last_name=? where
+		 * 3. update bank_account set balance=?, first_name=?, last_name=? where
 		 * acc_num=?
 		 * 
-		 * After Save : true
+		 * 4. After Save : true
 		 */
 
 		// Points to Note:
 		/**
 		 * Save - will flush(not committed yet) data to db and update in first level cache right away
-		 * Entity Update - while save method is called, entity is updated in
+		 * Entity Update - while save method is executed, entity is updated in
 		 * first level cache and in db. 
-		 * commit in db- at the end of method call, data is updated in db
+		 * commit in db- at the end of method execution, data is updated in db
 		 */
 		transactionService.testSaveAndFlush();
+	}
+	
+	@Test
+	public void testSaveAndFlush_whenCacheIsEvicted_fetchFromDb_hasLatestChanges() {
+		transactionService.testSaveAndFlush_whenCacheEvicted_fetchFromDb_hasLatestChanges();
+	}
+
+	@Test
+	public void testSave_whenCacheIsEvicted_fetchFromDb_doesNotHaveLatestChanges() {
+		transactionService.testSave_whenCacheEvicted_fetchFromDb_doesNotHaveLatestChanges();
 	}
 
 }
