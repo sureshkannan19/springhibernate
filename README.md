@@ -3,7 +3,7 @@ In this project, have explored spring data jpa with hibernate implementation.
 
 **Note:**
 
-**MySQL** is used for database operation. If MySQL setup is **not present in your machine**, please feel free to use **H2 database** by changing the profile --> **@ActiveProfiles** from "dev" to "int" in all test files, in this <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/" style="text-decoration:none;">folder</a>
+**MySQL** is used for database operation. If MySQL setup is **not present in your machine**, please feel free to use **H2 database** by changing the profile --> **--spring.profiles.active=int** from "dev" to "int" in all test files, in this <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/" style="text-decoration:none;">folder</a>
 
 ----------------------------------------------------------------------------------------------
 **Finder Methods** - Spring JPA has provided features, such as without writing a JPQL, desired search operation can be performed by using method name itself.
