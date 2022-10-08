@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 
 import lombok.EqualsAndHashCode;
@@ -20,6 +22,8 @@ import lombok.ToString;
 @Setter
 @EqualsAndHashCode
 @ToString
+@NamedQuery(name = "License.getByType", query = "select l from License l where l.type=:type")
+@NamedNativeQuery(name = "License.getByValidFrom", query = "select * from License where VALID_FROM =:validFrom", resultClass = License.class)
 public class License {
 
 	@Id
