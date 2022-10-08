@@ -4,11 +4,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
+import com.sk.hibernate.annotation.SpringBootTestByProfile;
 import com.sk.hibernate.entity.Employee;
 
-@SpringBootTest(args = "--spring.profiles.active=int")
+@SpringBootTestByProfile
 public class EmployeeApplicationTests {
 
 	@Autowired

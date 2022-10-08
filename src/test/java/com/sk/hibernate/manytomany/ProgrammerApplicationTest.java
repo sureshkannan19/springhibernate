@@ -2,9 +2,10 @@ package com.sk.hibernate.manytomany;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(args = "--spring.profiles.active=int")
+import com.sk.hibernate.annotation.SpringBootTestByProfile;
+
+@SpringBootTestByProfile
 public class ProgrammerApplicationTest {
 
 	@Autowired

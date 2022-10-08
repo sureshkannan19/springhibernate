@@ -5,13 +5,20 @@ import javax.persistence.EntityManager;
 import org.hibernate.Session;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.sk.hibernate.annotation.SpringBootTestByProfile;
 import com.sk.hibernate.entity.Product;
 
-@SpringBootTest(args = "--spring.profiles.active=int" )
+/**
+ * Note: 
+ * 1. Enable/Add --> spring.jpa.show-sql=true, to witness the working of SecondLevelCache, check
+ * the logs(Hint : Check the number of times SQL query is printed) in
+ * console.
+ * 
+ */
+@SpringBootTestByProfile
 @Sql(scripts = { "/db/data/product-int.sql" })
 public class ProductApplicationSecondLevelCacheTest {
 

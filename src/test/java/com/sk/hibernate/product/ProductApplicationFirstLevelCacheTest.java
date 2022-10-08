@@ -12,9 +12,16 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sk.hibernate.entity.Product;
 
 /**
- * Disabled SecondLevelCache
+ * Note: 
+ * 1. Without @Transactional FirstLevelCache will not work, since the cache works at session level only.
+ * 2. Disabled SecondLevelCache inorder to witness the FirstLevelCache working.
+ * 3. Enable/Add --> spring.jpa.show-sql=true, to witness the working of FirstLevelCache, check
+ * the logs(Hint : Check the number of times SQL query is printed) in
+ * console.
+ * 
  */
-@SpringBootTest(args = { "--spring.profiles.active=int" })
+@SpringBootTest(args = { "--spring.profiles.active=int",
+		"--spring.jpa.properties.hibernate.cache.use_second_level_cache=false" })
 @Sql(scripts = { "/db/data/product-int.sql" })
 public class ProductApplicationFirstLevelCacheTest {
 	
@@ -24,32 +31,20 @@ public class ProductApplicationFirstLevelCacheTest {
 	@Autowired
 	EntityManager entityManager;
 
-	/**
-	 * Enable/Add --> spring.jpa.show-sql=true, to witness the working of
-	 * FirstLevelCache. In logs, below SQL is printed only once, since SQL executed
-	 * only once.
-	 *
-	 * Eg : Hibernate: select product0_.product_id as product_1_1_0_,
-	 * product0_.description as descript2_1_0_, product0_.name as name3_1_0_,
-	 * product0_.price as price4_1_0_ from product product0_ where
-	 * product0_.product_id=?
-	 * 
-	 * Note: By commenting @Transactional, execute the test method, inorder to fetch
-	 * from db instead of cache at the second time.
-	 */
 	@Test
 	@Transactional // Without @Transactional FirstLevelCache will not work.
-	public void firstLevelCache_test() {
+	public void test_firstLevelCache() {
 		productRepository.findById(1); // fetch from db and result is cached
 		productRepository.findById(1); // check in cache, if present fetch from cache else fetch from db
 	}
 
 	/**
 	 * After evicting the session, in cache data is not present hence fetch from db
+	 * Query exeucted twice 
 	 */
 	@Test
 	@Transactional
-	public void firstLevelCache_sessionEvict_test() {
+	public void test_firstLevelCacheBy_EvictingTheCachedData_FromSession() {
 		Session session = entityManager.unwrap(Session.class);
 		Product product = productRepository.findById(1).get(); // fetch from db and result is cached
 		session.evict(product);

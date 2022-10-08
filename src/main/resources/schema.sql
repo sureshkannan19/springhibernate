@@ -103,31 +103,31 @@ CREATE TABLE IF NOT EXISTS phone_number
    type varchar (20),
    FOREIGN KEY (client_id) REFERENCES User_client (client_id)
 );
-create table programmer
+create table if not exists programmer
 (
    id int PRIMARY KEY AUTO_INCREMENT,
    name varchar (20)
 );
-create table project
+create table if not exists project
 (
    id int PRIMARY KEY AUTO_INCREMENT,
    name varchar (20)
 );
-create table programmers_projects
+create table if not exists programmers_projects
 (
    programmer_id int,
    project_id int,
    FOREIGN KEY (programmer_id) REFERENCES programmer (id),
    FOREIGN KEY (project_id) REFERENCES project (id)
 );
-create table person
+create table if not exists person
 (
    id int PRIMARY KEY AUTO_INCREMENT,
    first_name varchar (20),
    last_name varchar (20),
    age int
 );
-create table license
+create table if not exists license
 (
    id int PRIMARY KEY AUTO_INCREMENT,
    type varchar (20),

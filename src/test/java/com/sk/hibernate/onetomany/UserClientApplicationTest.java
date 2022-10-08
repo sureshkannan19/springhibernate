@@ -4,11 +4,12 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 
-@SpringBootTest(args = "--spring.profiles.active=int")
+import com.sk.hibernate.annotation.SpringBootTestByProfile;
+
+@SpringBootTestByProfile
 @Sql(scripts = {"/db/data/userClient.sql"})
 public class UserClientApplicationTest {
 

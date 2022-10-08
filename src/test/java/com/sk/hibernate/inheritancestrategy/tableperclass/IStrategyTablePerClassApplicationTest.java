@@ -4,9 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(args = "--spring.profiles.active=int")
+import com.sk.hibernate.annotation.SpringBootTestByProfile;
+
+@SpringBootTestByProfile
 public class IStrategyTablePerClassApplicationTest {
 
 	@Autowired

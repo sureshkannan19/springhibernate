@@ -4,10 +4,11 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 
-@SpringBootTest(args = "--spring.profiles.active=int")
+import com.sk.hibernate.annotation.SpringBootTestByProfile;
+
+@SpringBootTestByProfile
 @Sql(scripts = { "/db/data/product-int.sql" })
 public class ProductApplicationSpringCacheTest {
 

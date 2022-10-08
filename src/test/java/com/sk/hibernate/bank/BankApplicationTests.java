@@ -2,15 +2,16 @@ package com.sk.hibernate.bank;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.test.context.jdbc.Sql;
 
-@SpringBootTest(args = "--spring.profiles.active=int")
-@Sql(scripts = {"/db/data/userClient.sql"})
+import com.sk.hibernate.annotation.SpringBootTestByProfile;
+
+@SpringBootTestByProfile
+@Sql(scripts = {"/db/data/bank-int.sql"})
 public class BankApplicationTests {
 
 	@Autowired
