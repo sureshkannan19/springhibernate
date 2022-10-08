@@ -17,6 +17,12 @@ In this project, have explored spring data jpa with hibernate implementation.
 * Dynamic query formation using <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetoone/DynamicQueryExecutionTest.java" style="text-decoration:none;">JpaSpecificationExecutor</a>
 
 ----------------------------------------------------------------------------------------------
+**Pagable And Sorting :**
+
+* To Sort results and/or to limit number of results to be fetched explore <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/BankApplicationTests.java" style="text-decoration:none;">here</a>
+
+------------------------------------------------------------------------------------------------
+
 **Cache :** 
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationFirstLevelCacheTest.java" style="text-decoration:none;">FirstLevelCache</a>
 
@@ -28,9 +34,6 @@ In this project, have explored spring data jpa with hibernate implementation.
 
 To show the difference between First and SecondLevelCache, second level cache is disabled in
 <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationFirstLevelCacheTest.java" style="text-decoration:none;">FirstLevelCache</a> using **--spring.jpa.properties.hibernate.cache.use_second_level_cache=false**
-------------------------------------------------------------------------------------------------
-<a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/BankApplicationTests.java" style="text-decoration:none;">Pageable and Sorting</a>
-
 ------------------------------------------------------------------------------------------------
 **Inheritance Strategy :-**
 
