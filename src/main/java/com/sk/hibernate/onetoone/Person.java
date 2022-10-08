@@ -26,6 +26,7 @@ public class Person {
 	private int age;
 
 	@OneToOne(mappedBy = "person")
+	@ToString.Exclude
 	private License license;
 
 }
