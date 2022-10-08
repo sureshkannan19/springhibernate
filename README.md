@@ -30,10 +30,10 @@ In this project, have explored spring data jpa with hibernate implementation.
 
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationSpringCacheTest.java" style="text-decoration:none;">Spring Cache</a>
 
-**Note :**
+**Note:**
 
-To show the difference between First and SecondLevelCache, second level cache is disabled in
-<a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationFirstLevelCacheTest.java" style="text-decoration:none;">FirstLevelCache</a> using **--spring.jpa.properties.hibernate.cache.use_second_level_cache=false**
+To show the difference between First and SecondLevelCache, second level cache is disabled in <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationFirstLevelCacheTest.java" style="text-decoration:none;">FirstLevelCache</a> using
+**--spring.jpa.properties.hibernate.cache.use_second_level_cache=false**
 ------------------------------------------------------------------------------------------------
 **Inheritance Strategy :-**
 
