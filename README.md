@@ -19,7 +19,7 @@ In this project, have explored spring data jpa with hibernate implementation.
 ----------------------------------------------------------------------------------------------
 **Pagable And Sorting :**
 
-* To Sort results and/or to limit number of results to be fetched explore <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/BankApplicationTests.java" style="text-decoration:none;">here</a>
+* To Sort results and/or to restrict number of results to be fetched explore <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/BankApplicationTests.java" style="text-decoration:none;">here</a>
 
 ------------------------------------------------------------------------------------------------
 
