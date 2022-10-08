@@ -103,3 +103,20 @@ CREATE TABLE IF NOT EXISTS phone_number
    type varchar (20),
    FOREIGN KEY (client_id) REFERENCES User_client (client_id)
 );
+create table programmer
+(
+   id int PRIMARY KEY AUTO_INCREMENT,
+   name varchar (20)
+);
+create table project
+(
+   id int PRIMARY KEY AUTO_INCREMENT,
+   name varchar (20)
+);
+create table programmers_projects
+(
+   programmer_id int,
+   project_id int,
+   FOREIGN KEY (programmer_id) REFERENCES programmer (id),
+   FOREIGN KEY (project_id) REFERENCES project (id)
+);

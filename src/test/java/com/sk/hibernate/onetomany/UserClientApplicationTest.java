@@ -13,8 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserClientApplicationTest {
 
 	@Autowired
-	UserClientRepository repository;
-
+	UserClientRepository clientRepository;
+	
 	@Test
 	public void createClient() {
 
@@ -27,13 +27,13 @@ public class UserClientApplicationTest {
 
 		userClient.addPhoneNumber(phoneNumber);
 
-		repository.save(userClient);
+		clientRepository.save(userClient);
 	}
-	
+
 	@Test
 	@Transactional
 	public void fetchClient() {
-		UserClient userClient = repository.findById(1).get();
+		UserClient userClient = clientRepository.findById(1).get();
 		System.out.println("Fetched Client");
 		Set<PhoneNumber> phoneNumbers = userClient.getPhoneNumbers();
 		if (!phoneNumbers.isEmpty()) {
