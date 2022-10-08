@@ -50,7 +50,7 @@ Entities used are Address, Customer and <a href="https://github.com/sureshbabk19
 ------------------------------------------------------------------------------------------------
 **Difference between save and saveAndFlush :-**
 
-* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/SaveVsSaveAndFlush.java" style="text-decoration:none;">SaveVsSaveAndFlushBasic</a>
+* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/SaveVsSaveAndFlushBasic.java" style="text-decoration:none;">SaveVsSaveAndFlushBasic</a>
 
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/bank/SaveVsSaveAndFlushOnCacheEvict.java" style="text-decoration:none;">SaveVsSaveAndFlushOnCacheEvict</a>
 
