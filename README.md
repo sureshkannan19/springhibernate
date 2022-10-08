@@ -53,6 +53,8 @@ Entities used are Address, Customer and <a href="https://github.com/sureshbabk19
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetomany/UserClientApplicationTest.java" style="text-decoration:none;">OneToMany</a>
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/manytomany/ProgrammerApplicationTest.java" style="text-decoration:none;">ManyToMany</a>
 
+* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetoone/LicenseApplicationTest.java" style="text-decoration:none;">OneToOne</a>
+
 -------------------------------------------------------------------------------------------------------
 **Miscellaneous :**
 * <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/main/java/com/sk/hibernate/entity" style="text-decoration:none;">Entities</a>
