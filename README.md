@@ -10,7 +10,7 @@ In this project, have explored spring data jpa with hibernate implementation.
 * Refer : <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/product/ProductApplicationTests.java" style="text-decoration:none;">Few examples</a>
 * Refer : <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-keywords" style="text-decoration:none;">Spring Documentation</a>
 
-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 **Types of Query Formation :**
 
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetoone/NamedAndNativeQueryExecutionTest.java" style="text-decoration:none;">Named And Native Query</a>
