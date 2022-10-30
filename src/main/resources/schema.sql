@@ -136,3 +136,22 @@ create table if not exists license
    person_id int,
    FOREIGN KEY (person_id) REFERENCES person (id)
 );
+create table if not exists Points_Table
+(
+   team_name varchar (20) PRIMARY KEY,
+   run_rate decimal (20),
+   points int
+);
+create table if not exists POINTS_TABLE_AUD
+(
+   team_name varchar (20),
+   run_rate decimal (20),
+   points int,
+   rev bigint PRIMARY KEY,
+   revtype varchar (20)
+);
+create table if not exists REVINFO
+(
+   rev bigint not null primary key AUTO_INCREMENT,
+   revtstmp timestamp
+);
