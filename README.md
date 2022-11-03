@@ -68,7 +68,7 @@ Entities used are Address, Customer and <a href="https://github.com/sureshbabk19
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/audit/CricketMatchApplicationTest.java" style="text-decoration:none;"> Audit table changes</a>
  </a>
  
-**Note: **
+**Note :**
 
 * **REV** column in <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/Audit.java" style="text-decoration:none;">Audit </a>Entity is incremented by one  per transaction, if batch insert in done on the audited entity, then only one revision number incremented and stored in audit tables(REVINFO, *_AUD) 
 
