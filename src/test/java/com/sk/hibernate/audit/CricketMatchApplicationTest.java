@@ -15,31 +15,35 @@ import com.sk.hibernate.annotation.SpringBootTestByProfile;
 public class CricketMatchApplicationTest {
 
 	@Autowired
-	PointsTableRepository pointsTableRepository;
+	ICCRankingRepository iccRankingRepository;
 
 	@Autowired
 	EntityManagerFactory entityManagerFactory;
 
 	@Test
-	public void create() {
-		PointsTable pointsTable = new PointsTable("INDIA", 2, 5d);
-		pointsTableRepository.save(pointsTable);
+	public void test() {
+		ICCRanking indIccRanking = iccRankingRepository.findById("INDIA").get();
+		// update iccranking set match_format=?, ranking=? where team_name=?
+		// insert into iccranking_aud (revtype, ranking, match_format, team_name, rev) values (?, ?, ?, ?, ?)
+		indIccRanking.setRanking(2);  
+		
+		int rank = 10;
+		for (Player player : indIccRanking.getPlayers()) { // 3 players
+			// executed thrice --> 3 * update player set team_name=?, odi_ranking=?, t20_ranking=?, test_ranking=? where player_name=?
+			// executed thrice --> 3 * insert into player_aud (revtype, odi_ranking, t20_ranking, test_ranking, team_name, player_name, rev) values (?, ?, ?, ?, ?, ?, ?)
+			player.setT20Ranking(rank--); 
+		}
+		
+		// insert into revinfo (rev, revtstmp) values (default, ?)
+        // db operations in tables --> PLAYER, ICCRanking, REVINFO, ICCRanking_AUD, PLAYER_AUD
+		// CRIC_MATCH is excluded due to @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
+		iccRankingRepository.save(indIccRanking);
 
+		// Using Revision Id, primary Key --> Persisted data for that revision (transaction) can be found
 		AuditReader reader = AuditReaderFactory.get(entityManagerFactory.createEntityManager());
-		pointsTable = reader.find(PointsTable.class, "INDIA", 1l);
+		indIccRanking = reader.find(ICCRanking.class, "INDIA", 1l);
 
-		System.out.println(pointsTable);
+		System.out.println(indIccRanking);
 	}
 
-	@Test
-	public void modify() {
-		PointsTable result = pointsTableRepository.findById("INDIA").get();
-		result.setPoints(6);
-		pointsTableRepository.save(result);
-
-		AuditReader reader = AuditReaderFactory.get(entityManagerFactory.createEntityManager());
-
-		PointsTable pointsTable = reader.find(PointsTable.class, "INDIA", 1l);
-		System.out.println(pointsTable);
-	}
 }

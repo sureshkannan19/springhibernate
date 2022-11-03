@@ -2,9 +2,7 @@ package com.sk.hibernate.audit;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
-import org.hibernate.envers.AuditTable;
-import org.hibernate.envers.Audited;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -20,13 +18,11 @@ import lombok.ToString;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-@Audited
-@AuditTable("POINTS_TABLE_AUD")
-public class PointsTable {
+@Table(name = "CRIC_MATCH")
+public class Match {
 
 	@Id
-	private String teamName;
-	private int points;
-	private double runRate;
+	private String matchFormat;
+	private int noOfOvers;
 
 }

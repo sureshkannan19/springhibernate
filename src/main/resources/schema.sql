@@ -136,18 +136,36 @@ create table if not exists license
    person_id int,
    FOREIGN KEY (person_id) REFERENCES person (id)
 );
-create table if not exists Points_Table
+create table if not exists ICCRanking
 (
    team_name varchar (20) PRIMARY KEY,
-   run_rate decimal (20),
-   points int
+   ranking int,
+   match_format varchar (20)
 );
-create table if not exists POINTS_TABLE_AUD
+create table if not exists PLAYER
+(
+   PLAYER_NAME varchar (20) PRIMARY KEY,
+   TEAM_NAME varchar (20),
+   T20_RANKING int,
+   ODI_RANKING int,
+   TEST_RANKING int
+);
+create table if not exists ICCRanking_AUD
 (
    team_name varchar (20),
-   run_rate decimal (20),
-   points int,
-   rev bigint PRIMARY KEY,
+   ranking int,
+   match_format varchar (20),
+   rev bigint,
+   revtype varchar (20)
+);
+create table if not exists PLAYER_AUD
+(
+   PLAYER_NAME varchar (20),
+   TEAM_NAME varchar (20),
+   T20_RANKING int,
+   ODI_RANKING int,
+   TEST_RANKING int,
+   rev bigint ,
    revtype varchar (20)
 );
 create table if not exists REVINFO
@@ -155,3 +173,8 @@ create table if not exists REVINFO
    rev bigint not null primary key AUTO_INCREMENT,
    revtstmp timestamp
 );
+create table if not exists CRIC_MATCH
+(
+   MATCH_FORMAT varchar (20),
+   NO_OF_OVERS int
+ );

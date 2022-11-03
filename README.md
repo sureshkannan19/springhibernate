@@ -64,12 +64,22 @@ Entities used are Address, Customer and <a href="https://github.com/sureshbabk19
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetoone/LicenseApplicationTest.java" style="text-decoration:none;">OneToOne</a>
 
 -------------------------------------------------------------------------------------------------------
+**Hibernate Envers :**
+* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/audit/CricketMatchApplicationTest.java" style="text-decoration:none;"> Audit table changes</a>
+ </a>
+ 
+**Note: **
+
+* **REV** column in <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/Audit.java" style="text-decoration:none;">Audit</a>Entity is increment by one  per transaction, if batch insert in done on the audited entity, then only one revision number incremented and stored in audit tables(REVINFO, *_AUD) 
+
+
+* **@Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)**  -- used to not audit other end relative entity, will **work only in** <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/ICCRanking.java" style="text-decoration:none;">unidirectional relationship</a> and will **not work in** <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/ICCRanking.java" style="text-decoration:none;"> bidirectional relationship</a> 
+ 
+---------------------------------------------------------------------------------------------------------
+
 **Miscellaneous :**
 * <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/main/java/com/sk/hibernate/entity" style="text-decoration:none;">Entities</a>
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/resources/schema.sql" style="text-decoration:none;">schema.sql</a>
 * <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/resources/db/data" style="text-decoration:none;">Test datas</a>
 
 ------------------------------------------------------------------------------------------------------
-**Audit :**
-* <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/audit/CricketMatchApplicationTest.java" style="text-decoration:none;"> Audit table changes</a>
- </a>
