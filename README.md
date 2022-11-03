@@ -70,7 +70,7 @@ Entities used are Address, Customer and <a href="https://github.com/sureshbabk19
  
 **Note: **
 
-* **REV** column in <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/Audit.java" style="text-decoration:none;">Audit</a>Entity is increment by one  per transaction, if batch insert in done on the audited entity, then only one revision number incremented and stored in audit tables(REVINFO, *_AUD) 
+* **REV** column in <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/Audit.java" style="text-decoration:none;">Audit </a>Entity is incremented by one  per transaction, if batch insert in done on the audited entity, then only one revision number incremented and stored in audit tables(REVINFO, *_AUD) 
 
 
 * **@Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)**  -- used to not audit other end relative entity, will **work only in** <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/ICCRanking.java" style="text-decoration:none;">unidirectional relationship</a> and will **not work in** <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/ICCRanking.java" style="text-decoration:none;"> bidirectional relationship</a> 
