@@ -31,7 +31,9 @@ public class Programmer {
 	private String name;
 
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinTable(name = "PROGRAMMERS_PROJECTS", joinColumns = @JoinColumn(name = "programmer_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "project_id", referencedColumnName = "id"))
+	@JoinTable(name = "PROGRAMMERS_PROJECTS", 
+	joinColumns = @JoinColumn(name = "programmer_id", referencedColumnName = "id"), 
+    inverseJoinColumns = @JoinColumn(name = "project_id", referencedColumnName = "id"))
 	private Set<Project> projects;
 
 	public void addProject(Project project) {
