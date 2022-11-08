@@ -36,11 +36,13 @@ In this project, have explored spring data jpa with hibernate implementation.
 ------------------------------------------------------------------------------------------------
 **Inheritance Strategy :-**
 
-* **Single :**  Entities used are Payment, Card, Check and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/single/IStrategySingleApplicationTest.java" style="text-decoration:none;">Test file</a>
+* **Single :**  Entities used are Payment, Card, Check and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/single/IStrategySingleApplicationTest.java" style="text-decoration:none;">Test file</a>, where all datas will be stored in single table based on **@DiscriminatorValue** as used in above entities.
 
-* **TablePerClass :**  Entities used are Car, TataNexon, MaruthiSwift and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/tableperclass/IStrategyTablePerClassApplicationTest.java" style="text-decoration:none;">Test file</a>
 
-* **Joined :** Entities used are Student, Boyz, Girlz and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/joined/IStrategyJoinedApplicationTest.java" style="text-decoration:none;">Test file</a>
+* **TablePerClass :**  Entities used are Car, TataNexon, MaruthiSwift and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/tableperclass/IStrategyTablePerClassApplicationTest.java" style="text-decoration:none;">Test file</a>, where data will be stored in **individual tables(MaruthiSwift or TataNexon) based on implementation type**
+
+
+* **Joined :** Entities used are Student, Boyz, Girlz and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/joined/IStrategyJoinedApplicationTest.java" style="text-decoration:none;">Test file</a>, where data will be stored in **parent(Student) and child tables(Boyz or Girlz) based on implementation type**
 
 -------------------------------------------------------------------------------------------------
 **Component Mapping :** 
