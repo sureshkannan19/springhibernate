@@ -78,6 +78,11 @@ Entities used are Address, Customer and <a href="https://github.com/sureshbabk19
 * **@Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)**  -- used to not audit other end relative entity, will **work only in** <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/ICCRanking.java" style="text-decoration:none;">unidirectional relationship</a> and will **not work in** <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/main/java/com/sk/hibernate/audit/ICCRanking.java" style="text-decoration:none;"> bidirectional relationship</a> 
  
 ---------------------------------------------------------------------------------------------------------
+**LOB :**
+
+* Image save and retrieve using **Blob** datatype. <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/lob/ImageApplicationTest.java" style="text-decoration:none;">Explore</a>
+
+---------------------------------------------------------------------------------------------------------
 
 **Miscellaneous :**
 * <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/main/java/com/sk/hibernate/entity" style="text-decoration:none;">Entities</a>

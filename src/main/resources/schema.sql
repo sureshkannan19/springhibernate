@@ -165,7 +165,7 @@ create table if not exists PLAYER_AUD
    T20_RANKING int,
    ODI_RANKING int,
    TEST_RANKING int,
-   rev bigint ,
+   rev bigint,
    revtype varchar (20)
 );
 create table if not exists REVINFO
@@ -177,4 +177,11 @@ create table if not exists CRIC_MATCH
 (
    MATCH_FORMAT varchar (20),
    NO_OF_OVERS int
- );
+);
+create TABLE if not exists image
+(
+   id BIGINT NOT NULL,
+   name varchar (100) NOT NULL,
+   data BLOB NOT NULL,
+   PRIMARY KEY (id)
+);
