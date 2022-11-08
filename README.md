@@ -39,7 +39,7 @@ In this project, have explored spring data jpa with hibernate implementation.
 * **Single :**  Entities used are Payment, Card, Check and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/single/IStrategySingleApplicationTest.java" style="text-decoration:none;">Test file</a>, where all datas will be stored in single table based on **@DiscriminatorValue** as used in above entities.
 
 
-* **TablePerClass :**  Entities used are Car, TataNexon, MaruthiSwift and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/tableperclass/IStrategyTablePerClassApplicationTest.java" style="text-decoration:none;">Test file</a>, where data will be stored in **individual tables(MaruthiSwift or TataNexon) based on implementation type**
+* **TablePerClass :**  Entities used are Car, TataNexon, MaruthiSwift and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/tableperclass/IStrategyTablePerClassApplicationTest.java" style="text-decoration:none;">Test file</a>, where data will be stored in **individual tables(Either MaruthiSwift or TataNexon) based on implementation type**
 
 
 * **Joined :** Entities used are Student, Boyz, Girlz and <a href="https://github.com/sureshbabk19698/springhibernate/tree/main/src/test/java/com/sk/hibernate/inheritancestrategy/joined/IStrategyJoinedApplicationTest.java" style="text-decoration:none;">Test file</a>, where data will be stored in **parent(Student) and child tables(Boyz or Girlz) based on implementation type**
