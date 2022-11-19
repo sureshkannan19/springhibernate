@@ -16,6 +16,7 @@ In this project, have explored spring data jpa with hibernate implementation.
 * <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetoone/NamedAndNativeQueryExecutionTest.java" style="text-decoration:none;">Named And Native Query</a>
 * Dynamic query formation using <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetoone/DynamicQueryExecutionTest.java" style="text-decoration:none;">JpaSpecificationExecutor</a>
 
+* In a single query execution, if **columns fetched belongs to different entities, or within an entity only few columns is required then** <a href="https://github.com/sureshbabk19698/springhibernate/blob/main/src/test/java/com/sk/hibernate/onetoone/NamedAndNativeQueryExecutionTest.java" style="text-decoration:none;">tuple</a> is one way to store result.
 ----------------------------------------------------------------------------------------------
 **Pagable And Sorting :**
 
