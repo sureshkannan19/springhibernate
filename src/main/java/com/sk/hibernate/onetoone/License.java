@@ -32,8 +32,8 @@ import lombok.ToString;
 		@ConstructorResult(targetClass = License.class, columns = { @ColumnResult(name = "id"),
 				@ColumnResult(name = "type") }) })
 @NamedNativeQueries({
-		@NamedNativeQuery(name = "License.getByValidFrom", query = "select * from License where VALID_FROM =:validFrom", resultClass = License.class),
-		@NamedNativeQuery(name = "License.getAllIdAndTypeByValidFrom", query = "Select id, type from License where valid_from >= :validFrom", resultSetMapping = "LicenseIdAndTypeByValidFrom") })
+		@NamedNativeQuery(name = "License.getAllIdAndTypeByValidFrom", query = "Select id, type from License where valid_from >= :validFrom", resultSetMapping = "LicenseIdAndTypeByValidFrom"),
+		@NamedNativeQuery(name = "License.getByValidFrom", query = "select * from License where VALID_FROM =:validFrom", resultClass = License.class) })
 @NamedQuery(name = "License.getByType", query = "select l from License l where l.type=:type")
 @NoArgsConstructor
 @AllArgsConstructor

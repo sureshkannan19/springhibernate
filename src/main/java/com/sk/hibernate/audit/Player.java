@@ -1,19 +1,9 @@
 package com.sk.hibernate.audit;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
+import lombok.*;
 import org.hibernate.envers.Audited;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -43,7 +33,4 @@ public class Player {
 	@ToString.Exclude
 	private ICCRanking iccRanking;
 
-	public Player(ICCRanking iccRanking) {
-		this.iccRanking = iccRanking;
-	}
 }

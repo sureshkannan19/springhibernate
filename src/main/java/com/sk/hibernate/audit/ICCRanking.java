@@ -1,27 +1,14 @@
 package com.sk.hibernate.audit;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
+import lombok.*;
 import org.hibernate.envers.AuditTable;
 import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
 import org.hibernate.envers.RelationTargetAuditMode;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "ICCRanking")
@@ -37,16 +24,19 @@ public class ICCRanking {
 
 	@Id
 	private String teamName;
+	@NotAudited
 	private int ranking;
 
 	@Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED) // unidirectional relationship
+//	@NotAudited
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "MATCH_FORMAT")
 	private Match match;
 
-	// @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED) // will not work for bidrectional relationship
+	 @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
 	@OneToMany(mappedBy = "iccRanking", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@EqualsAndHashCode.Exclude
+	@NotAudited
 	private Set<Player> players;
 
 	public void addPlayer(Player player) {

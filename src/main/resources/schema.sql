@@ -185,3 +185,34 @@ create TABLE if not exists image
    data BLOB NOT NULL,
    PRIMARY KEY (id)
 );
+
+CREATE TABLE IF NOT EXISTS customers
+(
+   customer_Id int primary key auto_increment,
+   customer_Name varchar (20),
+   social_Security_Num varchar (30),
+   PAYMENT_MODE varchar (30)
+);
+
+
+CREATE TABLE IF NOT EXISTS customers_aud
+(
+   customer_Id int primary key auto_increment,
+   customer_Name varchar (20),
+   social_Security_Num varchar (30),
+   PAYMENT_MODE varchar (30),
+   rev bigint,
+   revtype varchar (20)
+);
+
+CREATE TABLE IF NOT EXISTS payments
+(
+    PAYMENT_MODE varchar (30),
+   ACCEPTABLE_COUNTRY varchar (30)
+);
+
+CREATE TABLE IF NOT EXISTS SHOP_OWNER
+(
+    SHOP_NAME varchar (30),
+   OWNER_id int primary key
+);
