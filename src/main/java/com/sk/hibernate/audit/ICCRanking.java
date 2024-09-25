@@ -33,10 +33,8 @@ public class ICCRanking {
 	@JoinColumn(name = "MATCH_FORMAT")
 	private Match match;
 
-	 @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
 	@OneToMany(mappedBy = "iccRanking", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@EqualsAndHashCode.Exclude
-	@NotAudited
 	private Set<Player> players;
 
 	public void addPlayer(Player player) {
